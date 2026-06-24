@@ -10,7 +10,6 @@ public class ProxyImage implements Image {
 
     @Override
     public void display() {
-        // Lazy initialization: load only when needed
         if (realImage == null) {
             realImage = new RealImage(filename);
         }

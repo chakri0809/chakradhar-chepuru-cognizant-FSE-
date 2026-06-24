@@ -11,14 +11,12 @@ public class Main {
                                 .powerSupply("850W")
                                 .build();
 
-        // Office Computer configuration
         Computer officePC = new Computer.Builder()
                                 .CPU("Intel i5")
                                 .RAM("16GB")
                                 .storage("512GB SSD")
                                 .build(); // no graphics card or custom PSU
 
-        // Print configurations
         System.out.println("Gaming PC: " + gamingPC.getCPU() + ", " + gamingPC.getRAM() + ", " +
                            gamingPC.getStorage() + ", " + gamingPC.getGraphicsCard() + ", " +
                            gamingPC.getPowerSupply());

@@ -9,6 +9,6 @@ public abstract class NotifierDecorator implements Notifier {
 
     @Override
     public void send(String message) {
-        wrappedNotifier.send(message); // delegate to base notifier
+        wrappedNotifier.send(message);
     }
 }

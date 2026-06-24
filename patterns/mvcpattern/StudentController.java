@@ -9,7 +9,6 @@ public class StudentController {
         this.view = view;
     }
 
-    // Update model
     public void setStudentName(String name) {
         model.setName(name);
     }
@@ -22,7 +21,6 @@ public class StudentController {
         model.setGrade(grade);
     }
 
-    // Retrieve model
     public String getStudentName() { return model.getName(); }
     public String getStudentId() { return model.getId(); }
     public String getStudentGrade() { return model.getGrade(); }

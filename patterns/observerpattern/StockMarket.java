@@ -24,7 +24,6 @@ public class StockMarket implements Stock {
         }
     }
 
-    // Method to change stock price
     public void setPrice(double price) {
         this.price = price;
         notifyObservers();

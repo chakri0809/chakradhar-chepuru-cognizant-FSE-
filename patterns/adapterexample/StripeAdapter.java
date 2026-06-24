@@ -9,6 +9,6 @@ public class StripeAdapter implements PaymentProcessor {
 
     @Override
     public void processPayment(double amount) {
-        stripe.pay(amount); // translate call
+        stripe.pay(amount);
     }
 }

@@ -7,7 +7,7 @@ public class SlackNotifierDecorator extends NotifierDecorator {
 
     @Override
     public void send(String message) {
-        super.send(message); // send via base notifier
+        super.send(message);
         System.out.println("Sending Slack message: " + message);
     }
 }
