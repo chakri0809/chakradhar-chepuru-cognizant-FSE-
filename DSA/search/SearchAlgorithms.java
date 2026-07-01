@@ -6,10 +6,10 @@ public class SearchAlgorithms {
     public static int linearSearch(Product[] products, String targetName) {
         for (int i = 0; i < products.length; i++) {
             if (products[i].getProductName().equalsIgnoreCase(targetName)) {
-                return i; // found
+                return i;
             }
         }
-        return -1; // not found
+        return -1;
     }
 
     // Binary Search by productName (array must be sorted by name)
@@ -20,14 +20,14 @@ public class SearchAlgorithms {
             int cmp = products[mid].getProductName().compareToIgnoreCase(targetName);
 
             if (cmp == 0) {
-                return mid; // found
+                return mid;
             } else if (cmp < 0) {
-                left = mid + 1; // search right half
+                left = mid + 1;
             } else {
-                right = mid - 1; // search left half
+                right = mid - 1;
             }
         }
-        return -1; // not found
+        return -1;
     }
 }
 

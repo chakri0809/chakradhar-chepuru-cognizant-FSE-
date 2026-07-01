@@ -9,7 +9,7 @@ public class SearchAlgorithms {
                 return i; // found
             }
         }
-        return -1; // not found
+        return -1;
     }
 
     // Binary Search by title (array must be sorted by title)
@@ -27,6 +27,6 @@ public class SearchAlgorithms {
                 right = mid - 1; // search left half
             }
         }
-        return -1; // not found
+        return -1;
     }
 }
