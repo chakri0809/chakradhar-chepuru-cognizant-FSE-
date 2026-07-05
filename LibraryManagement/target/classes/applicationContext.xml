@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Exercise 8: enable AspectJ auto-proxying -->
+    <aop:aspectj-autoproxy/>
+
+    <!-- Exercise 3 & 8: register the logging aspect -->
+    <bean id="loggingAspect" class="com.library.aspect.LoggingAspect"/>
+
+    <!-- Exercise 1 & 5: BookRepository bean -->
+    <bean id="bookRepository" class="com.library.repository.BookRepository"/>
+
+    <!-- Exercise 2: Setter Injection -->
+    <bean id="bookService" class="com.library.service.BookService">
+        <property name="bookRepository" ref="bookRepository"/>
+    </bean>
+
+    <!-- Exercise 7: Constructor Injection (alternative bean definition) -->
+    <bean id="bookServiceConstructor" class="com.library.service.BookService">
+        <constructor-arg ref="bookRepository"/>
+    </bean>
+
+    <!--
+        Exercise 6: Annotation-based configuration alternative.
+        Uncomment the line below (and remove the explicit bean definitions
+        above) to switch to @Service/@Repository + component scanning:
+
+        <context:component-scan base-package="com.library"/>
+    -->
+
+</beans>
