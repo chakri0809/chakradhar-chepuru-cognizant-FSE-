@@ -2,7 +2,6 @@ package com.library.repository;
 
 import org.springframework.stereotype.Repository;
 
-// Exercise 6: @Repository annotation for annotation-based configuration
 @Repository
 public class BookRepository {
 

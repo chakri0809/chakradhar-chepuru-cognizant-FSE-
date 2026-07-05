@@ -4,8 +4,7 @@ import com.library.service.BookService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-// Exercises 1, 2, 3, 5, 7, 8: loads applicationContext.xml and exercises
-// dependency injection + AOP logging
+
 public class LibraryManagementApplication {
 
     public static void main(String[] args) {
