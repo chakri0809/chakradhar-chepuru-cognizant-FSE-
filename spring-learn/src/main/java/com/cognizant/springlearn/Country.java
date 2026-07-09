@@ -1,28 +1,47 @@
-package com.cognizant.spring_learn;
+package com.cognizant.springlearn;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+/**
+ * Doc 1 - Hands on 4/5/6: bean loaded from country.xml (individually and as a list).
+ * Doc 4: @NotNull / @Size added later so @Valid can validate incoming POST payloads.
+ */
 public class Country {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(Country.class);
+
+    @NotNull
+    @Size(min = 2, max = 2, message = "Country code should be 2 characters")
     private String code;
+
+    @NotNull
     private String name;
+
     public Country() {
         LOGGER.debug("Inside Country Constructor.");
     }
+
     public String getCode() {
-        LOGGER.debug("Getting code: {}", code);
+        LOGGER.debug("getCode() called");
         return code;
     }
+
     public void setCode(String code) {
-        LOGGER.debug("Setting code: {}", code);
+        LOGGER.debug("setCode({})", code);
         this.code = code;
     }
+
     public String getName() {
-        LOGGER.debug("Getting name: {}", name);
+        LOGGER.debug("getName() called");
         return name;
     }
 
     public void setName(String name) {
-        LOGGER.debug("Setting name: {}", name);
+        LOGGER.debug("setName({})", name);
         this.name = name;
     }
 

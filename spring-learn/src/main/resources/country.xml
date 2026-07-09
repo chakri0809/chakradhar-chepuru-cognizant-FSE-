@@ -4,47 +4,38 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!-- Single Country bean (default singleton scope) -->
-    <bean id="country" class="com.cognizant.spring_learn.Country">
+    <bean id="country" class="com.cognizant.springlearn.Country">
         <property name="code" value="IN" />
         <property name="name" value="India" />
     </bean>
 
-    <!-- Prototype scope bean example -->
-    <bean id="prototypeCountry" class="com.cognizant.spring_learn.Country" scope="prototype">
-        <property name="code" value="US" />
-        <property name="name" value="United States" />
-    </bean>
-
-    <!-- Individual country beans -->
-    <bean id="in" class="com.cognizant.spring_learn.Country">
+    <bean id="in" class="com.cognizant.springlearn.Country">
         <property name="code" value="IN" />
         <property name="name" value="India" />
     </bean>
 
-    <bean id="us" class="com.cognizant.spring_learn.Country">
+    <bean id="us" class="com.cognizant.springlearn.Country">
         <property name="code" value="US" />
         <property name="name" value="United States" />
     </bean>
 
-    <bean id="de" class="com.cognizant.spring_learn.Country">
+    <bean id="de" class="com.cognizant.springlearn.Country">
         <property name="code" value="DE" />
         <property name="name" value="Germany" />
     </bean>
 
-    <bean id="jp" class="com.cognizant.spring_learn.Country">
+    <bean id="jp" class="com.cognizant.springlearn.Country">
         <property name="code" value="JP" />
         <property name="name" value="Japan" />
     </bean>
 
-    <!-- List of countries -->
     <bean id="countryList" class="java.util.ArrayList">
         <constructor-arg>
             <list>
-                <ref bean="in"/>
-                <ref bean="us"/>
-                <ref bean="de"/>
-                <ref bean="jp"/>
+                <ref bean="in"></ref>
+                <ref bean="us"></ref>
+                <ref bean="de"></ref>
+                <ref bean="jp"></ref>
             </list>
         </constructor-arg>
     </bean>
