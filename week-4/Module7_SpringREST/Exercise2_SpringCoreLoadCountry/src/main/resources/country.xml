@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
++<beans xmlns="http://www.springframework.org/schema/beans"
++    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++    xsi:schemaLocation="http://www.springframework.org/schema/beans
++    http://www.springframework.org/schema/beans/spring-beans.xsd">
++    
++    <!-- This XML file defines Country objects as Spring Beans -->
++    <!-- We are creating Country objects using XML configuration -->
++    
++    <bean id="india" class="com.cognizant.model.Country">
++        <property name="countryName" value="India"/>
++        <property name="countryCode" value="IN"/>
++        <property name="capital" value="New Delhi"/>
++        <property name="population" value="1400000000"/>
++    </bean>
++    
++    <bean id="usa" class="com.cognizant.model.Country">
++        <property name="countryName" value="United States"/>
++        <property name="countryCode" value="US"/>
++        <property name="capital" value="Washington DC"/>
++        <property name="population" value="331000000"/>
++    </bean>
++    
++    <bean id="uk" class="com.cognizant.model.Country">
++        <property name="countryName" value="United Kingdom"/>
++        <property name="countryCode" value="UK"/>
++        <property name="capital" value="London"/>
++        <property name="population" value="67000000"/>
++    </bean>
++
++    <bean id="japan" class="com.cognizant.model.Country">
++        <property name="countryName" value="Japan"/>
++        <property name="countryCode" value="JP"/>
++        <property name="capital" value="Tokyo"/>
++        <property name="population" value="125000000"/>
++    </bean>
++
++    <bean id="australia" class="com.cognizant.model.Country">
++        <property name="countryName" value="Australia"/>
++        <property name="countryCode" value="AU"/>
++        <property name="capital" value="Canberra"/>
++        <property name="population" value="25000000"/>
++    </bean>
++    
++</beans>

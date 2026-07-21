@@ -16,14 +16,6 @@ public class Country {
     @Column(name = "co_name")
     private String name;
 
-    public Country() {
-    }
-
-    public Country(String code, String name) {
-        this.code = code;
-        this.name = name;
-    }
-
     public String getCode() {
         return code;
     }
